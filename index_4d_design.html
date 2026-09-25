@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="বিল্বনারায়ণ মোটর বাইন্ডিং এন্ড রিপিয়ার শপ — মোটর, ফ্যান, টুলু পাম্প, সাবমার্শিবল পাম্প ও অন্যান্য ইলেকট্রিক মেশিনের কাজ।">
+<title>বিল্বনারায়ণ মোটর বাইন্ডিং এন্ড রিপিয়ার শপ</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#050816;--panel:rgba(15,24,48,.72);--line:rgba(255,255,255,.12);
+  --text:#f8fbff;--muted:#aebbd4;--cyan:#48e7ff;--blue:#5b7cff;--purple:#a66cff;
+}
+body{
+  font-family:"Noto Sans Bengali","Nirmala UI",system-ui,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;
+}
+body:before,body:after{
+  content:"";position:fixed;z-index:-2;inset:auto;pointer-events:none;
+  width:430px;height:430px;border-radius:50%;filter:blur(90px);opacity:.22;
+  background:linear-gradient(135deg,var(--cyan),var(--purple));
+}
+body:before{top:5%;left:-160px;animation:orb 10s ease-in-out infinite}
+body:after{right:-170px;bottom:4%;animation:orb 12s ease-in-out infinite reverse}
+@keyframes orb{50%{transform:translate(80px,-40px) scale(1.15)}}
+a{text-decoration:none;color:inherit}
+.nav{
+  position:sticky;top:0;z-index:50;padding:14px 5%;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(5,8,22,.72);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);box-shadow:0 10px 35px rgba(0,0,0,.22)
+}
+.brand{font-weight:900;font-size:17px;letter-spacing:.2px}
+.navlinks{display:flex;gap:24px;font-size:14px;font-weight:700}
+.navlinks a{opacity:.8;transition:.25s}.navlinks a:hover{opacity:1;color:var(--cyan)}
+.hero{
+  min-height:86vh;padding:85px 6%;display:flex;align-items:center;justify-content:center;
+  text-align:center;position:relative;overflow:hidden;
+  background:
+   radial-gradient(circle at 50% 35%,rgba(76,104,255,.28),transparent 30%),
+   radial-gradient(circle at 20% 80%,rgba(72,231,255,.12),transparent 28%),
+   linear-gradient(145deg,#071027,#050816 58%,#09051a);
+}
+.hero:before{
+  content:"";position:absolute;inset:-50%;background:
+  linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:55px 55px;transform:perspective(500px) rotateX(58deg) translateY(35%);
+  mask-image:linear-gradient(to bottom,transparent 0%,black 40%,transparent 100%);
+  animation:gridmove 9s linear infinite;
+}
+@keyframes gridmove{to{transform:perspective(500px) rotateX(58deg) translateY(25%)}}
+.hero-inner{max-width:950px;position:relative;z-index:2}
+.badge{
+ display:inline-flex;align-items:center;padding:8px 17px;border:1px solid rgba(72,231,255,.3);
+ border-radius:999px;background:rgba(72,231,255,.07);margin-bottom:22px;
+ box-shadow:0 0 30px rgba(72,231,255,.12);color:#d9fbff
+}
+h1{
+ font-size:clamp(35px,7vw,72px);line-height:1.1;margin-bottom:20px;font-weight:950;
+ background:linear-gradient(90deg,#fff,#b9d8ff 42%,#63efff 70%,#c59cff);
+ -webkit-background-clip:text;background-clip:text;color:transparent;
+ text-shadow:0 15px 50px rgba(80,130,255,.18);
+}
+.hero p{font-size:clamp(18px,3vw,23px);color:#d6e2f8}
+.cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{
+ padding:14px 23px;border-radius:14px;font-weight:900;display:inline-block;
+ transition:.25s;position:relative;overflow:hidden;transform:translateZ(0);
+}
+.btn:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-120%);transition:.5s}
+.btn:hover:before{transform:translateX(120%)}
+.btn:hover{transform:translateY(-4px) scale(1.02)}
+.primary{color:#06101f;background:linear-gradient(135deg,#fff,#8eeeff);box-shadow:0 12px 35px rgba(72,231,255,.22)}
+.secondary{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);backdrop-filter:blur(12px)}
+section{padding:90px 6%;position:relative}
+.wrap{max-width:1150px;margin:auto}
+.title{text-align:center;margin-bottom:42px}
+.title h2{font-size:clamp(28px,4vw,40px);font-weight:900}
+.title h2:after{content:"";display:block;width:70px;height:3px;margin:12px auto 0;border-radius:5px;background:linear-gradient(90deg,var(--cyan),var(--purple));box-shadow:0 0 20px var(--cyan)}
+.title p{color:var(--muted);margin-top:9px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{
+ background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
+ border-radius:24px;padding:28px;border:1px solid var(--line);
+ box-shadow:0 20px 50px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.08);
+ backdrop-filter:blur(16px);transition:.35s;transform-style:preserve-3d;
+ position:relative;overflow:hidden;
+}
+.card:before{
+ content:"";position:absolute;width:130px;height:130px;right:-70px;top:-70px;border-radius:50%;
+ background:var(--cyan);filter:blur(45px);opacity:.13
+}
+.card:hover{transform:perspective(800px) rotateX(4deg) rotateY(-4deg) translateY(-9px);border-color:rgba(72,231,255,.35);box-shadow:0 28px 70px rgba(0,0,0,.34),0 0 30px rgba(72,231,255,.08)}
+.icon{font-size:38px;margin-bottom:12px;filter:drop-shadow(0 8px 14px rgba(72,231,255,.22))}
+.card h3{font-size:20px;margin-bottom:5px}.card p{color:var(--muted)}
+.about{background:linear-gradient(180deg,transparent,rgba(38,62,110,.12),transparent)}
+.contact{background:linear-gradient(145deg,#070b1b,#0c1430);border-top:1px solid var(--line)}
+.contact .title p{color:#b8c6df}
+.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contactbox{
+ background:rgba(255,255,255,.055);padding:28px;border-radius:24px;
+ border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,.25);backdrop-filter:blur(16px)
+}
+.contactbox h3{margin-bottom:10px}.contactbox a{color:#dffbff}
+.qrbox{text-align:center}.qrbox img{width:190px;height:190px;background:#fff;padding:10px;border-radius:18px;box-shadow:0 0 35px rgba(72,231,255,.12)}
+footer{text-align:center;padding:28px;background:#03050d;color:#8f9bb2;font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:700px){
+ .nav{padding:13px 4%}.navlinks{display:none}
+ .hero{min-height:78vh;padding:60px 5%}
+ section{padding:65px 5%}.contactgrid{grid-template-columns:1fr}
+ .card{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">বিল্বনারায়ণ মোটর বাইন্ডিং</div>
+  <div class="navlinks">
+    <a href="#services">সার্ভিস</a>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#contact">যোগাযোগ</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="badge">⚙️ বিশ্বস্ত ইলেকট্রিক মেশিন রিপিয়ার</div>
+    <h1>বিল্বনারায়ণ মোটর বাইন্ডিং এন্ড রিপিয়ার শপ</h1>
+    <p>সঠিক দাম সঠিক কাজ</p>
+    <div class="cta">
+      <a class="btn primary" href="tel:6296201894">📞 এখনই কল করুন</a>
+      <a class="btn secondary" href="https://maps.app.goo.gl/Gh8kqejy1AxUHp3K8?g_st=ac" target="_blank">📍 দোকানের লোকেশন</a>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="title">
+      <h2>আমাদের সার্ভিস</h2>
+      <p>বিভিন্ন ধরনের মোটর ও ইলেকট্রিক মেশিনের কাজ</p>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="icon">⚙️</div><h3>মোটর</h3><p>মোটর বাইন্ডিং ও রিপিয়ার।</p></div>
+      <div class="card"><div class="icon">🌀</div><h3>টেবিল ফ্যান</h3><p>ফ্যানের বাইন্ডিং ও রিপিয়ার।</p></div>
+      <div class="card"><div class="icon">🌀</div><h3>সিলিং ফ্যান</h3><p>সিলিং ফ্যানের কাজ।</p></div>
+      <div class="card"><div class="icon">💧</div><h3>টুলু পাম্প</h3><p>পাম্পের বাইন্ডিং ও রিপিয়ার।</p></div>
+      <div class="card"><div class="icon">🔩</div><h3>ড্রিল</h3><p>ড্রিল মেশিনের কাজ।</p></div>
+      <div class="card"><div class="icon">✂️</div><h3>কাটার মেশিন</h3><p>কাটার মেশিনের রিপিয়ার।</p></div>
+      <div class="card"><div class="icon">💦</div><h3>সাবমার্শিবল পাম্প</h3><p>সাবমার্শিবল পাম্পের কাজ।</p></div>
+      <div class="card"><div class="icon">🔧</div><h3>অন্যান্য ইলেকট্রিক মেশিন</h3><p>প্রয়োজন অনুযায়ী অন্যান্য কাজ।</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="title">
+      <h2>আমাদের সম্পর্কে</h2>
+      <p>দক্ষতার সঙ্গে কাজ, যুক্তিসঙ্গত দাম এবং পরিষ্কারভাবে কাজ দেওয়াই আমাদের লক্ষ্য।</p>
+    </div>
+    <div class="card">
+      <h3>👨‍🔧 সজল মান্না</h3>
+      <p>বিল্বনারায়ণ মোটর বাইন্ডিং এন্ড রিপিয়ার শপে বিভিন্ন মোটর, ফ্যান, পাম্প ও ইলেকট্রিক মেশিনের বাইন্ডিং এবং রিপিয়ারের কাজ করা হয়।</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="title">
+      <h2>যোগাযোগ করুন</h2>
+      <p>দোকানে আসুন অথবা সরাসরি ফোন করুন</p>
+    </div>
+    <div class="contactgrid">
+      <div class="contactbox">
+        <h3>📍 দোকানের ঠিকানা</h3>
+        <p>নবান্দা, নড়রা, বাঁকুড়া</p><br>
+        <h3>📞 ফোন</h3>
+        <p><a href="tel:6296201894">6296201894</a></p><br>
+        <a class="btn primary" href="https://maps.app.goo.gl/Gh8kqejy1AxUHp3K8?g_st=ac" target="_blank">Google Maps খুলুন</a>
+      </div>
+      <div class="contactbox qrbox">
+        <h3>🌐 Website QR</h3>
+        <p style="margin-bottom:12px">Scan Me</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fsajalvai06-ops.github.io%2FSajal-work%2F" alt="Website QR Code">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 বিল্বনারায়ণ মোটর বাইন্ডিং এন্ড রিপিয়ার শপ • সজল মান্না</footer>
+<script>
+document.querySelectorAll('.card').forEach(card=>{
+  card.addEventListener('pointermove',e=>{
+    const r=card.getBoundingClientRect(), x=e.clientX-r.left, y=e.clientY-r.top;
+    const rx=((y/r.height)-.5)*-7, ry=((x/r.width)-.5)*7;
+    card.style.transform=`perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-7px)`;
+  });
+  card.addEventListener('pointerleave',()=>card.style.transform='');
+});
+</script>
+</body>
+</html>
